@@ -53,7 +53,6 @@ public class JmsConfig {
     /**
      * Este bean devuelve un objeto JmsListenerContainerFactory que se encarga de recibir los mensajes de los topicos.
      * Sabemos que es para los topicos porque hemos configurado la propiedad setPubSubDomain a true.
-     * Además, setSubscriptionDurable a true indica que el subscriptor es duradero.
      * El ClientId es el identificador del subscriptor.
      * Gracias a este Bean podemos usar la anotación @JmsListener en los métodos de la clase SubscriberService.
      *
@@ -76,7 +75,6 @@ public class JmsConfig {
     /**
      * Este bean devuelve un objeto JmsListenerContainerFactory que se encarga de recibir los mensajes de las colas.
      * Sabemos que es para las colas porque hemos configurado la propiedad setPubSubDomain a false (por defecto es false).
-     * Además, setSubscriptionDurable a true indica que el subscriptor es duradero.
      * El ClientId es el identificador del subscriptor.
      * Gracias a este Bean podemos usar la anotación @JmsListener en los métodos de la clase SubscriberService.
      *
